@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeria – 300 Fotos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <a href="home.html" class="logo">← Voltar ao Início</a>
+      <h1>Galeria de Fotos (300 imagens)</h1>
+    </div>
+    <div class="filters" id="filters"></div>
+  </header>
+
+  <main>
+    <div class="grid" id="gallery"></div>
+  </main>
+
+  <footer>
+    Site em HTML + CSS + JS • 10 categorias com 30 fotos cada
+  </footer>
+
+  <!-- Modal para exibir foto ampliada -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <img id="modalImage" src="" alt="Foto ampliada" />
+      <div class="modal-info" id="modalInfo"></div>
+      <div class="modal-controls">
+        <button id="zoomOut">−</button>
+        <span id="zoomLevel">100%</span>
+        <button id="zoomIn">+</button>
+        <button id="zoomReset">↺</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

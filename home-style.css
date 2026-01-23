@@ -1,0 +1,373 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.hero-video {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #0f172a;
+}
+
+.hero-video-element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 0;
+  background: #0f172a;
+}
+
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-video-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  animation: fadeInUp 1s ease-out;
+  max-width: 90%;
+  padding: 0 20px;
+}
+
+.hero-video-content h1 {
+  font-size: clamp(2rem, 8vw, 4rem);
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  letter-spacing: -1px;
+}
+
+.hero-video-content p {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  margin-bottom: 40px;
+  color: #cbd5e1;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Botões */
+.btn-primary {
+  display: inline-block;
+  padding: 14px 40px;
+  background: linear-gradient(135deg, #38bdf8 0%, #3b82f6 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5);
+  background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
+}
+
+.btn-large {
+  padding: 16px 50px;
+  font-size: 1.2rem;
+}
+
+/* About Section */
+.about {
+  padding: 80px 20px;
+  background: #1e293b;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #38bdf8;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #cbd5e1;
+}
+
+/* Videos Section */
+.videos {
+  padding: 80px 20px;
+  background: #0f172a;
+}
+
+.videos h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #38bdf8;
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+}
+
+.video-container {
+  max-width: 100%;
+  background: #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.2);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  transition: all 0.3s ease;
+}
+
+.video-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(56, 189, 248, 0.3);
+  border-color: #38bdf8;
+}
+
+.video-container video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #0f172a;
+}
+
+.video-info {
+  padding: 30px;
+  text-align: center;
+}
+
+.video-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #e5e7eb;
+}
+
+.video-info p {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Categories Section */
+.categories {
+  padding: 80px 20px;
+  background: #0f172a;
+}
+
+.categories h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #38bdf8;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.category-card {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+  border-color: #38bdf8;
+  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.2);
+  background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
+}
+
+.category-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.category-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #e5e7eb;
+}
+
+.category-card p {
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+/* CTA Section */
+.cta {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #020617 0%, #1e293b 100%);
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #38bdf8;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #cbd5e1;
+}
+
+/* Footer */
+footer {
+  background: #020617;
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 1px solid #1e293b;
+  color: #94a3b8;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-video {
+    height: 100vh;
+  }
+
+  .hero-video-content h1 {
+    font-size: clamp(1.8rem, 6vw, 3rem);
+  }
+
+  .hero-video-content p {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-video {
+    height: 100vh;
+  }
+
+  .hero-video-content h1 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+
+  .hero-video-content p {
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    margin-bottom: 30px;
+  }
+
+  .btn-primary {
+    padding: 12px 32px;
+    font-size: 1rem;
+  }
+
+  .about h2,
+  .categories h2,
+  .cta h2,
+  .videos h2 {
+    font-size: 2rem;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+  }
+
+  .category-card {
+    padding: 30px 20px;
+  }
+
+  .category-icon {
+    font-size: 2rem;
+  }
+
+  .videos-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-video {
+    height: 100vh;
+  }
+
+  .hero-video-content {
+    padding: 0 15px;
+  }
+
+  .hero-video-content h1 {
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    margin-bottom: 15px;
+  }
+
+  .hero-video-content p {
+    font-size: clamp(0.8rem, 1.8vw, 0.95rem);
+    margin-bottom: 20px;
+  }
+
+  .btn-primary {
+    padding: 10px 28px;
+    font-size: 0.95rem;
+  }
+
+  .about,
+  .categories,
+  .cta,
+  .videos {
+    padding: 40px 20px;
+  }
+}
