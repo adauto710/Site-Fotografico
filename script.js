@@ -29,7 +29,7 @@ function generatePhotos() {
         category,
         title: `${category} ${i}`,
         // Caminho padrão das imagens (você pode trocar depois)
-        src: `fotos/${category.toLowerCase()}/${i}.jpg`
+        src: `${category.toLowerCase()}/${i}.jpg`
       });
       id++;
     }
@@ -225,3 +225,4 @@ if (selectedCategory) {
   // Caso contrário, mostrar todas as fotos
   renderGallery(allPhotos);
 }
+
