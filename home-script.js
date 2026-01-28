@@ -2,6 +2,8 @@
 document.querySelectorAll('.category-card').forEach((card, index) => {
   const categoryNames = [
     'Casal',
+    <img src="1.jpg" width="80" onclick="abrir('1.jpg')">
+<img src="fotos/2.jpg" width="80" onclick="abrir('fotos/2.jpg')">
     'Natureza',
     'Avatar',
     'Viagem',
@@ -41,3 +43,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
